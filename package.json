@@ -1,5 +1,5 @@
 {
-  "name": "basics-react",
+  "name": "expensify-app",
   "version": "1.0.0",
   "description": "A back to basics approach for creating a react app",
   "main": "app.js",
