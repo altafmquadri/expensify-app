@@ -4,7 +4,7 @@ const EditExpensePage = (props) => {
     console.log(props);
     return (
         <div>
-            This is for editing expenses component
+            Editing the expense with id of {props.match.params.id}
         </div>
     )
 }
