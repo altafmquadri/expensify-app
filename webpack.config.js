@@ -21,6 +21,7 @@ module.exports = {
     devtool: 'cheap-module-source-map',
     devServer: {
         contentBase: path.join(__dirname, 'public'),
+        historyApiFallback: true,
         port: 3000
     },
     plugins: [new HtmlWebpackPlugin({
