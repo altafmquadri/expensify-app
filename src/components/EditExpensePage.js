@@ -9,5 +9,4 @@ const EditExpensePage = (props) => {
     )
 }
 
-
 export default EditExpensePage
