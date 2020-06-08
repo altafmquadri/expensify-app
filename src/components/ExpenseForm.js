@@ -48,12 +48,12 @@ class ExpenseForm extends Component {
             this.setState({ error: 'Please provide description and amount' })
         } else {
             this.setState({ error: '' });
-            // this.props.onSubmit({
-            //     description: this.state.description,
-            //     amount: parseFloat(this.state.amount, 10) * 100,
-            //     createdAt: this.state.createdAt, //moment.js get in milliseconds
-            //     note: this.state.note
-            // })
+            this.props.onSubmit({
+                description: this.state.description,
+                amount: parseFloat(this.state.amount, 10) * 100,
+                createdAt: this.state.createdAt.valueOf(), //moment.js get in milliseconds
+                note: this.state.note
+            })
         }
     }
 
