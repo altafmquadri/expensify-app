@@ -8,13 +8,16 @@ const now = moment()
 console.log(now.format('MMM Do, YYYY'));
 
 class ExpenseForm extends Component {
-    state = {
-        description: '',
-        note: '',
-        amount: '',
-        createdAt: moment(),
-        calendarFocused: false,
-        error: ''
+    constructor(props) {
+        super(props)
+        this.state = {
+            description: props.expense ? props.expense.description : '',
+            note: props.expense ? props.expense.note : '',
+            amount: props.expense ? (props.expense.amount / 100).toString() : '',
+            createdAt: props.expense ? moment(props.expense.createdAt) : moment(),
+            calendarFocused: false,
+            error: ''
+        }
     }
 
     onDescriptionChange = e => {
@@ -83,6 +86,7 @@ class ExpenseForm extends Component {
                         onFocusChange={this.onFocusChange}
                         numberOfMonths={1}
                         isOutsideRange={() => false}
+                        id="expensify-expense-form"
                     />
                     <textarea
                         placeholder='add a note for your expense (optional)'

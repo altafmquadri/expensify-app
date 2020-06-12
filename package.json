@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "build": "webpack  --mode production",
-    "server": "webpack-dev-server --open"
+    "server": "webpack-dev-server --open",
+    "test": "jest"
   },
   "author": "Altaf Quadri",
   "license": "MIT",
@@ -35,6 +36,7 @@
     "eslint-plugin-react": "^7.20.0",
     "eslint-plugin-react-hooks": "^2.5.1",
     "html-webpack-plugin": "^4.3.0",
+    "jest": "^26.0.1",
     "moment": "^2.26.0",
     "node-sass": "^4.14.1",
     "normalize.css": "^8.0.1",
