@@ -4,7 +4,9 @@
   "description": "A back to basics approach for creating a react app",
   "main": "app.js",
   "scripts": {
-    "build": "webpack  --mode production",
+    "serve": "live-server public/",
+    "build:dev": "webpack",
+    "build:prod": "webpack -p --env production",
     "server": "webpack-dev-server --open",
     "test": "jest --config=jest.config.json"
   },
@@ -40,6 +42,7 @@
     "eslint-plugin-react-hooks": "^2.5.1",
     "html-webpack-plugin": "^4.3.0",
     "jest": "^26.0.1",
+    "live-server": "^1.2.1",
     "moment": "^2.26.0",
     "node-sass": "^4.14.1",
     "normalize.css": "^8.0.1",
