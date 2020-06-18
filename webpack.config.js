@@ -1,5 +1,6 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = (env) => {
     const isProduction = env === 'production'
@@ -19,10 +20,22 @@ module.exports = (env) => {
             },
             {
                 test: /\.s?css$/,
-                use: ['style-loader', 'css-loader', 'sass-loader']
+                use: [isProduction ? MiniCssExtractPlugin.loader : 'style-loader', 
+                {
+                    loader: 'css-loader', 
+                    options: {
+                        sourceMap: true
+                    } 
+                }, 
+                {
+                    loader: 'sass-loader', 
+                    options: {
+                        sourceMap: true
+                    }
+                }]
             }]
         },
-        devtool: isProduction ? 'source-map' : 'cheap-module-source-map',
+        devtool: isProduction ? 'source-map' : 'inline-source-map',
         devServer: {
             contentBase: path.join(__dirname, 'public'),
             historyApiFallback: true,
@@ -30,6 +43,8 @@ module.exports = (env) => {
         },
         plugins: [new HtmlWebpackPlugin({
             template: './src/index.html'
+        }), new MiniCssExtractPlugin({
+            filename: 'styles.css'
         })]
     }
 }

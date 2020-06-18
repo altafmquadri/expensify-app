@@ -18,3 +18,8 @@ button:disabled {
 .is-active {
   font-weight: bold  ;
 }
+
+//to fix arrow not showing up
+.DateRangePickerInput_arrow {
+  position: relative;
+}
