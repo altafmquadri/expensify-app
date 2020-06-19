@@ -8,9 +8,9 @@ module.exports = (env) => {
     return {
         entry: './src/app.js',
         output: {
-            path: path.join(__dirname, 'public'),
+            path: path.join(__dirname, 'public', 'dist'),
             filename: 'bundle.js',
-            publicPath: '/'
+            publicPath: '/dist/'
         },
         module: {
             rules: [{
@@ -20,15 +20,15 @@ module.exports = (env) => {
             },
             {
                 test: /\.s?css$/,
-                use: [isProduction ? MiniCssExtractPlugin.loader : 'style-loader', 
+                use: [isProduction ? MiniCssExtractPlugin.loader : 'style-loader',
                 {
-                    loader: 'css-loader', 
+                    loader: 'css-loader',
                     options: {
                         sourceMap: true
-                    } 
-                }, 
+                    }
+                },
                 {
-                    loader: 'sass-loader', 
+                    loader: 'sass-loader',
                     options: {
                         sourceMap: true
                     }
@@ -39,10 +39,12 @@ module.exports = (env) => {
         devServer: {
             contentBase: path.join(__dirname, 'public'),
             historyApiFallback: true,
+            publicPath: '/dist/',
             port: 3000
         },
         plugins: [new HtmlWebpackPlugin({
-            template: './src/index.html'
+            template: './src/index.html',
+            filename: '../index.html'
         }), new MiniCssExtractPlugin({
             filename: 'styles.css'
         })]
