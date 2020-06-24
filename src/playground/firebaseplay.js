@@ -1,3 +1,59 @@
+
+// // Initialize Firebase
+// firebase.initializeApp(firebaseConfig);
+
+// const database = firebase.database()
+
+// //child_removed 
+// database.ref('expenses').on('child_removed', snapshot => {
+//     console.log(snapshot.key, snapshot.val())
+// })
+
+// //child_changed
+// database.ref('expenses').on('child_changed', snapshot => {
+//     console.log(snapshot.key, snapshot.val())
+// })
+
+// //child_added
+// database.ref('expenses').on('child_added', snapshot => {
+//     console.log(snapshot.key, snapshot.val());
+// })
+
+
+// database.ref('expenses')
+//     .once('value')
+//     .then(snapshot => {
+//         const expenses = []
+
+//         snapshot.forEach(childSnapshot => {
+//             expenses.push({
+//                 id: childSnapshot.key,
+//                 ...childSnapshot.val()
+//             })
+//         })
+//         console.log(expenses);
+//     })
+
+// database.ref('expenses').on('value', (snapshot) => {
+//     const expenses = []
+//     snapshot.forEach(childSnapshot => {
+//         expenses.push({
+//             id: childSnapshot.key,
+//             ...childSnapshot.val()
+//         })
+//     })
+//     console.log(expenses)
+// })
+
+// database.ref('expenses').push({
+//     description: 'Cereal',
+//     note: 'for month of june',
+//     amount: 100,
+//     createdAt: 0,
+// })
+
+
+
 // database.ref('notes/-MAZFYALGOFJUHnZCga5').remove()
 
 
