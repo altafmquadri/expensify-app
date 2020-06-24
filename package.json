@@ -16,6 +16,7 @@
   "license": "MIT",
   "dependencies": {
     "express": "^4.17.1",
+    "firebase": "^7.15.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.0",
