@@ -5,3 +5,5 @@ node_modules
 # public/styles.css.map
 public/index.html
 public/dist/
+.env.test
+.env.development
