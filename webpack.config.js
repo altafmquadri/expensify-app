@@ -65,7 +65,7 @@ module.exports = (env) => {
             'proces.env.FIREBASE_STORAGE_BUCKET': JSON.stringify(process.env.FIREBASE_STORAGE_BUCKET),
             'proces.env.FIREBASE_MESSAGING_SENDER_ID': JSON.stringify(process.env.FIREBASE_MESSAGING_SENDER_ID),
             'proces.env.FIREBASE_APP_ID': JSON.stringify(process.env.FIREBASE_APP_ID),
-            'proces.env.FIREBASE_MEASUREMENT_ID': JSON.stringify(process.env.FIREBASE_MEASUREMENT_ID),
+            'proces.env.FIREBASE_MEASUREMENT_ID': JSON.stringify(process.env.FIREBASE_MEASUREMENT_ID)
         })
         ]
     }
