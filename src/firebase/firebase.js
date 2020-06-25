@@ -12,12 +12,12 @@ const firebaseConfig = {
     messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
     appId: process.env.FIREBASE_APP_ID,
     measurementId: process.env.FIREBASE_MEASUREMENT_ID
-}
+};
 
 // // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-
 const database = firebase.database()
+
 
 export default database
 
