@@ -1,8 +1,4 @@
 
-// // Initialize Firebase
-// firebase.initializeApp(firebaseConfig);
-
-// const database = firebase.database()
 
 // //child_removed 
 // database.ref('expenses').on('child_removed', snapshot => {
