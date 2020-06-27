@@ -1,7 +1,14 @@
 {
     "cSpell.words": [
         "devtool",
+        "eslint",
+        "eslint plugin flowtype",
         "expensify",
+        "flowtype",
+        "heroku",
+        "heroku postbuild",
+        "plugin",
+        "postbuild",
         "uuidv"
     ],
     "cSpell.ignoreWords": [
