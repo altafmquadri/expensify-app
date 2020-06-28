@@ -1,14 +1,20 @@
 {
     "cSpell.words": [
+        "compose",
         "devtool",
+        "devtools",
         "eslint",
         "eslint plugin flowtype",
         "expensify",
+        "extension",
         "flowtype",
         "heroku",
         "heroku postbuild",
+        "init",
         "plugin",
         "postbuild",
+        "redux",
+        "redux devtools extension compose",
         "uuidv"
     ],
     "cSpell.ignoreWords": [

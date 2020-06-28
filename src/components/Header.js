@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink, withRouter } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { startLogout } from '../actions/auth'
 
@@ -16,4 +16,4 @@ const mapDispatchToProps = (dispatch) => ({
     startLogout: () => dispatch(startLogout())
 })
 
-export default withRouter(connect(undefined, mapDispatchToProps)(Header))
+export default connect(undefined, mapDispatchToProps)(Header)
