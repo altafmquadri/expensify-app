@@ -55,10 +55,11 @@ module.exports = (env) => {
         },
         plugins: [new HtmlWebpackPlugin({
             template: './src/index.html',
-            filename: '../index.html'
+            filename: '../index.html',
+            favicon: 'public/images/favicon.png'
         }),
         new MiniCssExtractPlugin({
-            filename: './dist/styles.css'
+            filename: 'styles.css'
         }),
         new webpack.DefinePlugin({
             'process.env.FIREBASE_API_KEY': JSON.stringify(process.env.FIREBASE_API_KEY),
